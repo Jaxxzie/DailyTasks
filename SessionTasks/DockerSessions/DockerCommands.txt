@@ -1,0 +1,31 @@
+sudo apt install docker.io
+sudo docker version
+
+#From Root user
+
+docker pull hello-world - to pull image from DockerHub
+
+docker images - to display images installed in local machine
+
+docker run -it --name cont.ubuntu ubuntu 
+	
+	docker-run - Create and run a new container from an image
+	--name     - Assign a name to the container
+	-i         - attach stdin (interactive)
+        -t/--tty   - pseudo terminal
+	ubuntu 	   - image name
+
+docker ps - list running containers
+docker ps -a - list all containers
+docker logs - show the container output
+
+#Pulled MySql image
+
+docker exec -it some-mysql bash - Interactive bash terminal for mysql
+docker stop "containername"     - to stop the running container
+docker rm <container_name>      - to delete a container
+docker rm $(docker ps -aq)	- to remove all containers at once
+	-q - will fetch only container's IDs
+docker rmi "ImageId" 		- to delete images
+
+
