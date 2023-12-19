@@ -20,10 +20,7 @@ docker run -it --name cont.ubuntu ubuntu
 docker ps - list running containers
 docker ps -a - list all containers
 docker logs - show the container output
-
-#Pulled MySql image
-
-docker exec -it some-mysql bash - Interactive bash terminal for mysql
+docker exec -it "contname" bash - Interactive bash terminal for specific container
 docker stop "containername"     - to stop the running container
 docker rm <container_name>      - to delete a container
 docker rm $(docker ps -aq)	- to remove all containers at once
